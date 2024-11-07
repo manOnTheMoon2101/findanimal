@@ -1,35 +1,33 @@
-# Vue.js
+# findanimal
 
-This directory is a brief example of a [Vue.js](https://vuejs.org/) app that can be deployed to Vercel with zero configuration.
+This template should help get you started developing with Vue 3 in Vite.
 
-## Deploy Your Own
+## Recommended IDE Setup
 
-Deploy your own Vue.js project with Vercel.
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/vue&template=vue)
+## Type Support for `.vue` Imports in TS
 
-_Live Example: https://vue-template.vercel.app_
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 
-## Running Locally
+## Customize configuration
 
-```
-yarn install
-```
+See [Vite Configuration Reference](https://vite.dev/config/).
 
-#### Compile and hot-reload for development
+## Project Setup
 
-```
-yarn serve
+```sh
+npm install
 ```
 
-#### Compile and minify for production
+### Compile and Hot-Reload for Development
 
-```
-yarn build
+```sh
+npm run dev
 ```
 
-#### Lint and fix files
+### Type-Check, Compile and Minify for Production
 
-```
-yarn lint
+```sh
+npm run build
 ```
