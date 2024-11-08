@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import Input from '../ui/input/Input.vue';
-import Button from '../ui/button/Button.vue';
-import dogs from "@/assets/dogs.jpg"
-
-const imageSrc = dogs;
-</script>
-
 <template>
     <div class="flex flex-row h-screen">
         <div class="bg-green-900 w-4/6 rounded-tr-lg rounded-br-lg">
@@ -34,3 +26,24 @@ const imageSrc = dogs;
         </div>
     </div>
 </template>
+
+
+<script lang="ts">
+import Input from '../ui/input/Input.vue';
+import Button from '../ui/button/Button.vue';
+import dogs from "@/assets/dogs.jpg"
+
+
+
+export default {
+    components: {
+        Input,
+        Button
+    },
+    data() {
+        return {
+            imageSrc: dogs
+        }
+    },
+}
+</script>
