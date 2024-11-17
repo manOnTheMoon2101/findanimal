@@ -1,8 +1,10 @@
-
+import Header from "@/components/Header";
+import Body from "@/components/Body";
 export default function Home() {
   return (
-   <div>
-    home
-   </div>
+    <div>
+      <Header />
+      <Body/>
+    </div>
   );
 }
