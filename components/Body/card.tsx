@@ -23,7 +23,7 @@ export function MainCard(props: any) {
       </CardContent>
       <CardFooter className="flex justify-between">
         <Button variant="outline">Cancel</Button>
-        <Button>Deploy</Button>
+        <Button className="bg-accent">Deploy</Button>
       </CardFooter>
     </Card>
   );
