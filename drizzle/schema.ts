@@ -5,10 +5,11 @@ import {
   pgTable,
   date,
   timestamp,
+  serial,
 } from "drizzle-orm/pg-core";
 
 export const animals = pgTable("animals", {
-  id: integer("id").primaryKey(),
+  id: serial("id").primaryKey().notNull(),
   name: text("name").notNull(),
   type: text("type").notNull(),
   adopted: boolean("adopted").default(false).notNull(),

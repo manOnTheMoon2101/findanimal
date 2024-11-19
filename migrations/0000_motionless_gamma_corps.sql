@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS "animals" (
-	"id" integer PRIMARY KEY NOT NULL,
+	"id" serial PRIMARY KEY NOT NULL,
 	"name" text NOT NULL,
 	"type" text NOT NULL,
 	"adopted" boolean DEFAULT false NOT NULL,
