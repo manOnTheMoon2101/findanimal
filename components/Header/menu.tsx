@@ -31,7 +31,7 @@ export function Menu() {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <IoMdSettings />
+            <IoMdSettings color="grey" />
             <span>Settings</span>
           </DropdownMenuItem>
         </DropdownMenuGroup>
