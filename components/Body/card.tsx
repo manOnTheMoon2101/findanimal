@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import { IoMdOpen } from "react-icons/io";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import {
@@ -23,7 +23,9 @@ export function MainCard(props: any) {
       </CardContent>
       <CardFooter className="flex justify-between">
         {formatDate(props.date)}
-        <Button className="bg-accent">Open</Button>
+        <Button className="bg-accent text-white">
+          <IoMdOpen />
+        </Button>
       </CardFooter>
     </Card>
   );
