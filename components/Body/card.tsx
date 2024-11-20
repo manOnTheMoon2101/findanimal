@@ -1,5 +1,5 @@
 import * as React from "react";
-import { IoMdOpen } from "react-icons/io";
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import {
@@ -10,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { MainDialog } from "./dialog";
 import formatDate from "@/utils/dateFormat";
 export function MainCard(props: any) {
   return (
@@ -23,10 +24,8 @@ export function MainCard(props: any) {
       </CardContent>
       <CardFooter className="flex justify-between">
         {formatDate(props.date)}
-        <Button className="bg-accent text-white">
-          <IoMdOpen />
-        </Button>
-      </CardFooter>
+        <MainDialog data={props}/>
+      </CardFooter> 
     </Card>
   );
 }
