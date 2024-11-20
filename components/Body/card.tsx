@@ -16,7 +16,9 @@ export function MainCard(props: any) {
     <Card className="w-[350px]">
       <CardHeader>
         <CardTitle>{props.name}</CardTitle>
-        <CardDescription>{props.type} {formatDate(props.date)}</CardDescription>
+        <CardDescription>
+          {props.type} {formatDate(props.date)}
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <Image src={props.image} alt="images" className="w-full" />
