@@ -16,16 +16,14 @@ export function MainCard(props: any) {
     <Card className="w-[350px]">
       <CardHeader>
         <CardTitle>{props.name}</CardTitle>
-        <CardDescription>
-          {props.type} {formatDate(props.date)}
-        </CardDescription>
+        <CardDescription>{props.type}</CardDescription>
       </CardHeader>
       <CardContent>
         <Image src={props.image} alt="images" className="w-full" />
       </CardContent>
       <CardFooter className="flex justify-between">
-        <Button variant="outline">Cancel</Button>
-        <Button className="bg-accent">Deploy</Button>
+        {formatDate(props.date)}
+        <Button className="bg-accent">Open</Button>
       </CardFooter>
     </Card>
   );

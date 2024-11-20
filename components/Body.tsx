@@ -34,7 +34,6 @@ const Body = () => {
             name={x.name}
             type={x.type}
             date={x.createdAt}
-            refresh={fetchPosts}
           />
         )
       )}
