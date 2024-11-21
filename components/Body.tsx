@@ -41,7 +41,6 @@ const Body = () => {
           </SelectTrigger>
           <SelectContent className="bg-background">
             <SelectGroup>
-              <SelectLabel>Type</SelectLabel>
               {data
                 .map((x: any) => x.type)
                 .filter(
