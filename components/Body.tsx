@@ -45,6 +45,7 @@ const Body = () => {
               image={x.image}
               name={x.name}
               type={x.type}
+              details={x.details}
               date={x.createdAt}
             />
           )

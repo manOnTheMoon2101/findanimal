@@ -33,7 +33,7 @@ export function MainDialog(data: any) {
             style={{ width: "100%", height: "auto" }}
           />
         </div>
-        <DialogDescription>info</DialogDescription>
+        <DialogDescription>{data.data.details}</DialogDescription>
         <DialogFooter>
           <Button>Contact</Button>
         </DialogFooter>
