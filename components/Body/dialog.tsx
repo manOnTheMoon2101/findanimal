@@ -24,7 +24,14 @@ export function MainDialog(data: any) {
           <DialogTitle>{data.data.name}</DialogTitle>
         </DialogHeader>
         <div>
-          <Image src={data.data.image} alt="images" className="w-full" />
+          <Image
+            src={data.data.image}
+            alt="images"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+          />
         </div>
         <DialogDescription>info</DialogDescription>
         <DialogFooter>
