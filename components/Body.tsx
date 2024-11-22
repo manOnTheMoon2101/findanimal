@@ -36,21 +36,23 @@ const Body = () => {
     <div>
       <div className="my-4">
       </div>
-      <div className="flex flex-row justify-between">
-        {data.map((x: any) =>
-          loading ? (
-            "loading"
-          ) : (
-            <MainCard
-              image={x.image}
-              name={x.name}
-              type={x.type}
-              details={x.details}
-              date={x.createdAt}
-            />
-          )
-        )}
+      <div className="flex flex-wrap justify-center gap-4 align-baseline">
+  {data.map((x: any) =>
+    loading ? (
+      <div>loading</div>
+    ) : (
+      <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+        <MainCard
+          image={x.image}
+          name={x.name}
+          type={x.type}
+          details={x.details}
+          date={x.createdAt}
+        />
       </div>
+    )
+  )}
+</div>
     </div>
   );
 };
