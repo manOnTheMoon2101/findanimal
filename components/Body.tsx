@@ -34,39 +34,21 @@ const Body = () => {
 
   return (
     <div>
-      <div className="my-4">
-        <Select>
-          <SelectTrigger className="w-[180px] bg-accent text-white">
-            <SelectValue placeholder="Type" />
-          </SelectTrigger>
-          <SelectContent className="bg-background">
-            <SelectGroup>
-              {data
-                .map((x: any) => x.type)
-                .filter(
-                  (value: any, index: any, self: any) =>
-                    self.indexOf(value) === index
-                )
-                .map((type: any) => (
-                  <SelectItem key={type} value={type}>
-                    {type}
-                  </SelectItem>
-                ))}
-            </SelectGroup>
-          </SelectContent>
-        </Select>
-      </div>
-      <div className="flex flex-row justify-between">
+      <div className="my-4"></div>
+      <div className="flex flex-wrap justify-center gap-4 align-baseline">
         {data.map((x: any) =>
           loading ? (
-            "loading"
+            <div>loading</div>
           ) : (
-            <MainCard
-              image={dogs}
-              name={x.name}
-              type={x.type}
-              date={x.createdAt}
-            />
+            <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+              <MainCard
+                image={x.image}
+                name={x.name}
+                type={x.type}
+                details={x.details}
+                date={x.createdAt}
+              />
+            </div>
           )
         )}
       </div>

@@ -20,12 +20,19 @@ export function MainCard(props: any) {
         <CardDescription>{props.type}</CardDescription>
       </CardHeader>
       <CardContent>
-        <Image src={props.image} alt="images" className="w-full" />
+        <Image
+          src={props.image}
+          alt="images"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
+        />
       </CardContent>
       <CardFooter className="flex justify-between">
         {formatDate(props.date)}
-        <MainDialog data={props}/>
-      </CardFooter> 
+        <MainDialog data={props} />
+      </CardFooter>
     </Card>
   );
 }
