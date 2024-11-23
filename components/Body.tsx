@@ -24,9 +24,15 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-
 import Image from "next/image";
 import { Button } from "./ui/button";
+import { Annie_Use_Your_Telescope } from "next/font/google";
+
+const annie = Annie_Use_Your_Telescope({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 const Body = () => {
   const [data, setData] = useState<any>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -68,15 +74,15 @@ const Body = () => {
           className="absolute top-0 left-0 z-0"
         />
         <div className="relative z-10 flex items-start justify-start w-full h-full bg-black bg-opacity-20 rounded">
-          <h2 className="text-white text-4xl md:text-5xl font-bold text-left absolute bottom-0 left-0 mb-4 ml-4">
-            woof
+          <h2 className="text-black text-4xl md:text-5xl font-bold text-left absolute bottom-0 left-0 mb-4 ml-4 bg-white">
+            find_A_nimal.
           </h2>
         </div>
       </div>
 
       <div>
         <div className="my-28">
-          <h2 className="text-8xl text-center">
+          <h2 className={`text-8xl text-center ${annie.className}`}>
             Give a shelter <br />
             Gain a friend
           </h2>
