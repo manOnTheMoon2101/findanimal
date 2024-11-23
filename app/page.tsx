@@ -7,7 +7,7 @@ export default function Home() {
       <div>
         <Header />
       </div>
-      <div className="my-48">
+      <div className="my-24">
         <Body />
       </div>
       <div>
