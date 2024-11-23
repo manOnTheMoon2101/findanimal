@@ -25,9 +25,9 @@ export function Menu() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56 bg-background">
-        <DropdownMenuLabel className="text-center">
+        {/* <DropdownMenuLabel className="text-center">
           find_A_nimal
-        </DropdownMenuLabel>
+        </DropdownMenuLabel> */}
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
