@@ -11,12 +11,26 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import Image from "next/image";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
+import Image from "next/image";
+import { Button } from "./ui/button";
 const Body = () => {
   const [data, setData] = useState<any>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [selectedType, setSelectedType] = useState<string | null>(null);
+  const [selectedType, setSelectedType] = useState<any>(null);
 
   const fetchPosts = async (type: string | null) => {
     setLoading(true);
@@ -68,10 +82,11 @@ const Body = () => {
           </h2>
         </div>
 
-        <div className="flex flex-row justify-center gap-4">
-          <Select onValueChange={handleSelectChange}>
+        <div className="flex flex-row items-center justify-center ">
+          <span className="text-center mx-2">Type :</span>
+          <Select onValueChange={handleSelectChange} value={selectedType}>
             <SelectTrigger className="w-[180px] bg-accent text-white">
-              <SelectValue placeholder="Type"  />
+              <SelectValue placeholder="Type" />
             </SelectTrigger>
             <SelectContent className="bg-background">
               <SelectGroup>
@@ -82,15 +97,16 @@ const Body = () => {
               </SelectGroup>
             </SelectContent>
           </Select>
-
-          {selectedType && (
-            <button
-              onClick={handleClearSelection}
-              className="bg-red-500 text-white px-4 py-2 rounded-md ml-4"
-            >
-              Clear Selection
-            </button>
-          )}
+          <div>
+            {selectedType && (
+              <Button
+                onClick={handleClearSelection}
+                className="bg-red-500 text-white px-4 py-2 rounded-md ml-4"
+              >
+                Clear Selection
+              </Button>
+            )}
+          </div>
         </div>
       </div>
 

@@ -14,7 +14,7 @@ import { MainDialog } from "./dialog";
 import formatDate from "@/utils/dateFormat";
 export function MainCard(props: any) {
   return (
-    <Card className="w-[350px]">
+    <Card className="w-[350px] bg-primary">
       <CardHeader>
         <CardTitle>{props.name}</CardTitle>
         <CardDescription>{props.type}</CardDescription>
