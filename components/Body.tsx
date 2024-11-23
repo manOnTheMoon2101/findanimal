@@ -96,10 +96,7 @@ const Body = () => {
             </SelectTrigger>
             <SelectContent className="bg-background">
               <SelectGroup>
-                <SelectItem value="mixed breed male">
-                  Mixed breed Male
-                </SelectItem>
-                <SelectItem value="NSB male">NSB male</SelectItem>
+                <SelectItem value="NSB male">NSB Male</SelectItem>
                 <SelectItem value="mixed breed male">
                   Mixed Breed Male
                 </SelectItem>

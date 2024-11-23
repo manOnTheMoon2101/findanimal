@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import types from "@/utils/typeFormat.json"; // Ensure the JSON is properly imported
 import Image from "next/image";
 import {
   Card,
@@ -9,14 +9,20 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Badge } from "../ui/badge";
 import { MainDialog } from "./dialog";
 import formatDate from "@/utils/dateFormat";
+
 export function MainCard(props: any) {
+  const matchedType = types.find((x : any) => x.type === props.type);
+
   return (
     <Card className="w-[350px] bg-primary">
       <CardHeader>
         <CardTitle>{props.name}</CardTitle>
-        <CardDescription>{props.type}</CardDescription>
+        <CardDescription>
+          {matchedType ? matchedType.name : "Unknown"}
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <Image
@@ -28,8 +34,8 @@ export function MainCard(props: any) {
           style={{ width: "100%", height: "auto" }}
         />
       </CardContent>
-      <CardFooter className="flex justify-between">
-        {formatDate(props.date)}
+      <CardFooter className="flex justify-between items-baseline">
+        <Badge className="bg-white"> {formatDate(props.date)}</Badge>
         <MainDialog data={props} />
       </CardFooter>
     </Card>
