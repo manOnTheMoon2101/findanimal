@@ -4,10 +4,10 @@ import { MdInfo } from "react-icons/md";
 export default function Home() {
   return (
     <div className="m-5">
-      <div>
+      {/* <div>
         <Header />
-      </div>
-      <div className="my-24">
+      </div> */}
+      <div className="my-18">
         <Body />
       </div>
       <div>
