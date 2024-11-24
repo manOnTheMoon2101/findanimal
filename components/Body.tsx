@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { MainCard } from "./Body/card";
-import dogs from "@/app/assets/images/dogs2.jpg";
+import dogs from "@/app/assets/images/dogs3.jpg";
 import {
   Select,
   SelectContent,
@@ -71,10 +71,10 @@ const Body = () => {
           alt="Dogs"
           layout="fill"
           objectFit="cover"
-          className="absolute top-0 left-0 z-0 rounded-lg"
+          className="absolute top-0 left-0 z-0 rounded"
         />
-        <div className="relative z-10 flex items-start justify-start w-full h-full bg-black bg-opacity-20 rounded-lg">
-          <h2 className="text-black text-4xl md:text-5xl font-bold text-left absolute bottom-0 right-4 mb-4 ml-4 bg-white ">
+        <div className="relative z-10 flex items-start justify-start w-full h-full bg-black bg-opacity-20 rounded">
+          <h2 className="text-black text-4xl md:text-5xl font-bold text-left absolute bottom-0 right-4 mb-4 ml-4 bg-white rounded ">
             find_A_nimal.
           </h2>
         </div>
@@ -88,10 +88,10 @@ const Body = () => {
           </h2>
         </div>
 
-        <div className="flex flex-row items-center justify-center ">
-          <span className="text-center mx-2">Type :</span>
+        <div className="flex flex-row items-center justify-center">
+          <span className="text-center mx-2">Filter :</span>
           <Select onValueChange={handleSelectChange} value={selectedType}>
-            <SelectTrigger className="w-[180px] bg-accent text-white">
+            <SelectTrigger className="w-[180px] bg-secondary text-white">
               <SelectValue placeholder="Type" />
             </SelectTrigger>
             <SelectContent className="bg-background">
