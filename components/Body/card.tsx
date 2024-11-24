@@ -14,12 +14,15 @@ import { MainDialog } from "./dialog";
 import formatDate from "@/utils/dateFormat";
 
 export function MainCard(props: any) {
-  const matchedType = types.find((x : any) => x.type === props.type);
+  const matchedType = types.find((x: any) => x.type === props.type);
 
   return (
-    <Card className="w-[350px] bg-primary">
+    <Card className="w-[350px] bg-background drop-shadow-xl">
       <CardHeader>
-        <CardTitle>{props.name}</CardTitle>
+        <CardTitle className="flex flex-row justify-between items-center">
+          <span>{props.name}</span>
+          <Badge className="bg-primary">Age</Badge>
+        </CardTitle>
         <CardDescription>
           {matchedType ? matchedType.name : "Unknown"}
         </CardDescription>
@@ -31,7 +34,7 @@ export function MainCard(props: any) {
           width={0}
           height={0}
           sizes="100vw"
-          style={{ width: "100%", height: "auto" }}
+          style={{ width: "100%", height: "auto", borderRadius: "20px" }}
         />
       </CardContent>
       <CardFooter className="flex justify-between items-baseline">

@@ -30,12 +30,12 @@ export function MainDialog(data: any) {
             width={0}
             height={0}
             sizes="100vw"
-            style={{ width: "100%", height: "auto" }}
+            style={{ width: "100%", height: "auto", borderRadius: "20px" }}
           />
         </div>
         <DialogDescription>{data.data.details}</DialogDescription>
         <DialogFooter>
-          <Button>Contact</Button>
+          <Button className="bg-accent text-white font-bold">Contact</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
