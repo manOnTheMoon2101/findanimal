@@ -1,6 +1,5 @@
 "use client";
 import { IoMdMenu } from "react-icons/io";
-import { IoMdSettings } from "react-icons/io";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,

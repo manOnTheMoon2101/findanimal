@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { MainCard } from "./Body/card";
-import dogs from "@/app/assets/images/dogs2.jpg";
+import dogs from "@/app/assets/images/dogs3.jpg";
 import {
   Select,
   SelectContent,
