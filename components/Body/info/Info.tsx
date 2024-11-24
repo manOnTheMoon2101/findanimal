@@ -29,9 +29,6 @@ export function InfoDialog() {
           with loving homes. This project is a step forward in supporting our
           community’s efforts to rescue and rehome animals.
         </DialogDescription>
-        <DialogFooter>
-          <Button>Contact</Button>
-        </DialogFooter>
       </DialogContent>
     </Dialog>
   );
