@@ -1,3 +1,4 @@
+"use client";
 import { IoMdMenu } from "react-icons/io";
 import { IoMdSettings } from "react-icons/io";
 import { Button } from "@/components/ui/button";
@@ -15,7 +16,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
+import { InfoDialog } from "../Body/info/Info";
 export function Menu() {
   return (
     <DropdownMenu>
@@ -30,9 +31,8 @@ export function Menu() {
         </DropdownMenuLabel> */}
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
-            <IoMdSettings color="grey" />
-            <span>Settings</span>
+          <DropdownMenuItem onSelect={(e) => e.preventDefault()}>
+            <InfoDialog />
           </DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>

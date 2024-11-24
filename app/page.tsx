@@ -1,22 +1,19 @@
 import Header from "@/components/Header";
 import Body from "@/components/Body";
 import { MdInfo } from "react-icons/md";
+import { InfoDialog } from "@/components/Body/info/Info";
 export default function Home() {
   return (
-    <div>
-      {/* <div>
+    <div className="m-5">
+      <div className="my-4">
         <Header />
+      </div>
+      <div className="my-24">
+        <Body />
+      </div>
+      {/* <div className="fixed bottom-5 right-5 p-2 z-20">
+        <InfoDialog />
       </div> */}
-      <body>
-        <div className="my-18">
-          <Body />
-        </div>
-        <div>
-          <button className="fixed bottom-5 right-5 bg-accent text-white p-4 rounded-full shadow-lg text-2xl">
-            <MdInfo />
-          </button>
-        </div>
-      </body>
     </div>
   );
 }
