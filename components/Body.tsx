@@ -71,9 +71,9 @@ const Body = () => {
           alt="Dogs"
           layout="fill"
           objectFit="cover"
-          className="absolute top-0 left-0 z-0 rounded-lg"
+          className="absolute top-0 left-0 z-0"
         />
-        <div className="relative z-10 flex items-start justify-start w-full h-full bg-black bg-opacity-20 rounded-lg">
+        <div className="relative z-10 flex items-start justify-start w-full h-full bg-black bg-opacity-20">
           <h2 className="text-black text-4xl md:text-5xl font-bold text-left absolute bottom-0 right-4 mb-4 ml-4 bg-white ">
             find_A_nimal.
           </h2>
