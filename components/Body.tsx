@@ -91,7 +91,7 @@ const Body = () => {
         <div className="flex flex-row items-center justify-center ">
           <span className="text-center mx-2">Type :</span>
           <Select onValueChange={handleSelectChange} value={selectedType}>
-            <SelectTrigger className="w-[180px] bg-accent text-white">
+            <SelectTrigger className="w-[180px] bg-secondary text-white">
               <SelectValue placeholder="Type" />
             </SelectTrigger>
             <SelectContent className="bg-background">
