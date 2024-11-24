@@ -88,8 +88,8 @@ const Body = () => {
           </h2>
         </div>
 
-        <div className="flex flex-row items-center justify-center ">
-          <span className="text-center mx-2">Type :</span>
+        <div className="flex flex-row items-center justify-center">
+          <span className="text-center mx-2">Filter :</span>
           <Select onValueChange={handleSelectChange} value={selectedType}>
             <SelectTrigger className="w-[180px] bg-secondary text-white">
               <SelectValue placeholder="Type" />
