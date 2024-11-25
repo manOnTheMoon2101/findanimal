@@ -79,14 +79,30 @@ async function scrapeDogPage(h2Value) {
   } else {
     console.log(`No image found for ${h2Value}`);
   }
+
   const detailsText = $("div.x-text.x-content.e104-e10.m2w-y.m2w-z")
     .text()
     .trim();
   if (detailsText) {
     petData.details = detailsText;
+
+    const ageMatch = detailsText.match(/\b\d+\b/);
+    if (ageMatch) {
+      petData.age = parseInt(ageMatch[0], 10);
+    }
+    const monthYearMatch = detailsText.match(/(\d+)\s*(month|year)/i);
+    if (monthYearMatch) {
+      petData.ageDate = monthYearMatch[2].toLowerCase();
+    }
   }
 
-  if (petData.details || petData.type || petData.image) {
+  if (
+    petData.details ||
+    petData.type ||
+    petData.image ||
+    petData.age ||
+    petData.ageDate
+  ) {
     return petData;
   } else {
     console.log(`No details found for ${h2Value}`);
