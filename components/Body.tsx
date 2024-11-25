@@ -97,6 +97,8 @@ const Body = () => {
             <SelectContent className="bg-background">
               <SelectGroup>
                 <SelectItem value="NSB male">NSB Male</SelectItem>
+                <SelectItem value="NSB female">NSB Female</SelectItem>
+                <SelectItem value="GSD Cross Female">GSD Cross Female</SelectItem>
                 <SelectItem value="Mixed Breed Male">
                   Mixed Breed Male
                 </SelectItem>
