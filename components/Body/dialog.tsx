@@ -40,7 +40,13 @@ export function MainDialog(data: any) {
           </Badge>
         </DialogDescription>
         <DialogFooter>
-          <Button className="bg-accent text-white font-bold">Contact</Button>
+          <a
+            href={`https://wellingtonspca.co.za/up-for-adoption/dogs/${data.data.name}/`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="bg-accent text-white font-bold">Contact</Button>
+          </a>
         </DialogFooter>
       </DialogContent>
     </Dialog>
