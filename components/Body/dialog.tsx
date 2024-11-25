@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import { IoMdOpen } from "react-icons/io";
 import Image from "next/image";
+import { Badge } from "../ui/badge";
 
 export function MainDialog(data: any) {
   return (
@@ -33,7 +34,11 @@ export function MainDialog(data: any) {
             style={{ width: "100%", height: "auto", borderRadius: "20px" }}
           />
         </div>
-        <DialogDescription>{data.data.details}</DialogDescription>
+        <DialogDescription>
+          <Badge>
+            {data.data.age} {data.data.ageDate}
+          </Badge>
+        </DialogDescription>
         <DialogFooter>
           <Button className="bg-accent text-white font-bold">Contact</Button>
         </DialogFooter>
