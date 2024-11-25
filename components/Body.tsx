@@ -97,10 +97,12 @@ const Body = () => {
             <SelectContent className="bg-background">
               <SelectGroup>
                 <SelectItem value="NSB male">NSB Male</SelectItem>
-                <SelectItem value="mixed breed male">
+                <SelectItem value="NSB female">NSB Female</SelectItem>
+                <SelectItem value="GSD Cross Female">GSD Cross Female</SelectItem>
+                <SelectItem value="Mixed Breed Male">
                   Mixed Breed Male
                 </SelectItem>
-                <SelectItem value="mixed breed female">
+                <SelectItem value="Mixed Breed Female">
                   Mixed Breed Female
                 </SelectItem>
                 <SelectItem value="Cross breed Male">
@@ -135,6 +137,8 @@ const Body = () => {
                 name={x.name}
                 type={x.type}
                 details={x.details}
+                age={x.age}
+                ageDate={x.ageDate}
                 date={x.createdAt}
               />
             </div>

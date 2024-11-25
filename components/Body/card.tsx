@@ -21,7 +21,9 @@ export function MainCard(props: any) {
       <CardHeader>
         <CardTitle className="flex flex-row justify-between items-center">
           <span>{props.name}</span>
-          <Badge className="bg-primary">Age</Badge>
+          <Badge className="bg-primary">
+            {props.age} {props.ageDate}
+          </Badge>
         </CardTitle>
         <CardDescription>
           {matchedType ? matchedType.name : "Unknown"}

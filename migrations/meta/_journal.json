@@ -8,6 +8,13 @@
       "when": 1732309212149,
       "tag": "0000_motionless_lady_ursula",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1732553340713,
+      "tag": "0001_flat_hellcat",
+      "breakpoints": true
     }
   ]
 }

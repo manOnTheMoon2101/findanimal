@@ -1,19 +1,33 @@
 [
   {
     "name": " Mixed Breed Male",
-    "type": "mixed breed male"
+    "type": "Mixed Breed Male"
   },
+  { "name": "Mixed Breed Female",
+   "type": "Mixed Breed Female" },
   {
     "name": "NSB Male",
     "type": "NSB male"
   },
   {
-    "name": "Mixed Breed Male",
-    "type": "mixed breed male"
+    "name": "NSB female",
+    "type": "NSB female"
   },
   {
-    "name": "Mixed Breed Female",
-    "type": "mixed breed female"
+    "name": "Terrier cross male",
+    "type": "Terrier cross male"
+  },
+  {
+    "name": "Cross breed Male",
+    "type": "Cross breed Male"
+  },
+  {
+    "name": "NSB male pup",
+    "type": "NSB male pup"
+  },
+  {
+    "name": "GSD Cross Female",
+    "type": "GSD Cross Female"
   },
   {
     "name": "Cross Breed Male",
