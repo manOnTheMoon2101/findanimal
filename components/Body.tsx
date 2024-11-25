@@ -135,6 +135,8 @@ const Body = () => {
                 name={x.name}
                 type={x.type}
                 details={x.details}
+                age={x.age}
+                ageDate={x.ageDate}
                 date={x.createdAt}
               />
             </div>

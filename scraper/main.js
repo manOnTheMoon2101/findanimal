@@ -90,7 +90,7 @@ async function scrapeDogPage(h2Value) {
     if (ageMatch) {
       petData.age = parseInt(ageMatch[0], 10);
     }
-    const monthYearMatch = detailsText.match(/(\d+)\s*(month|year)/i);
+    const monthYearMatch = detailsText.match(/(\d+)\s*(month|year|week)/i);
     if (monthYearMatch) {
       petData.ageDate = monthYearMatch[2].toLowerCase();
     }
