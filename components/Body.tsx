@@ -27,7 +27,7 @@ import {
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { Annie_Use_Your_Telescope } from "next/font/google";
-
+import { AiOutlineLoading } from "react-icons/ai";
 const annie = Annie_Use_Your_Telescope({
   weight: "400",
   subsets: ["latin"],
@@ -98,7 +98,9 @@ const Body = () => {
               <SelectGroup>
                 <SelectItem value="NSB male">NSB Male</SelectItem>
                 <SelectItem value="NSB female">NSB Female</SelectItem>
-                <SelectItem value="GSD Cross Female">GSD Cross Female</SelectItem>
+                <SelectItem value="GSD Cross Female">
+                  GSD Cross Female
+                </SelectItem>
                 <SelectItem value="Mixed Breed Male">
                   Mixed Breed Male
                 </SelectItem>
@@ -128,7 +130,9 @@ const Body = () => {
 
       <div className="flex flex-wrap justify-center gap-4 align-baseline my-4">
         {loading ? (
-          <div>Loading...</div>
+          <div>
+            <AiOutlineLoading size={34} className="animate-spin text-primary" />
+          </div>
         ) : (
           data.map((x: any) => (
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4" key={x.id}>
