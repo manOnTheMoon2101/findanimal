@@ -19,3 +19,11 @@ export const animals = pgTable("animals", {
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
+
+// export const tips = pgTable("tips", {
+//   id: serial("id").primaryKey().notNull(),
+//   animal: text("animal").notNull(),
+//   tip: text("tip"),
+//   createdAt: timestamp("created_at").defaultNow().notNull(),
+//   updatedAt: timestamp("updated_at").defaultNow().notNull(),
+// });

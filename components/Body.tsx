@@ -27,7 +27,7 @@ import {
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { Annie_Use_Your_Telescope } from "next/font/google";
-
+import { AiOutlineLoading } from "react-icons/ai";
 const annie = Annie_Use_Your_Telescope({
   weight: "400",
   subsets: ["latin"],
@@ -74,9 +74,9 @@ const Body = () => {
           className="absolute top-0 left-0 z-0 rounded"
         />
         <div className="relative z-10 flex items-start justify-start w-full h-full bg-black bg-opacity-20 rounded">
-          <h2 className="text-black text-4xl md:text-5xl font-bold text-left absolute bottom-0 right-4 mb-4 ml-4 bg-white rounded ">
+          {/* <h2 className="text-black text-4xl md:text-5xl font-bold text-left absolute bottom-0 right-4 mb-4 ml-4 bg-white rounded ">
             find_A_nimal.
-          </h2>
+          </h2> */}
         </div>
       </div>
 
@@ -88,8 +88,8 @@ const Body = () => {
           </h2>
         </div>
 
-        <div className="flex flex-row items-center justify-center">
-          <span className="text-center mx-2">Filter :</span>
+        <div className="flex flex-col items-center justify-center">
+          <span className="text-center font-bold">Filter</span>
           <Select onValueChange={handleSelectChange} value={selectedType}>
             <SelectTrigger className="w-[180px] bg-secondary text-white">
               <SelectValue placeholder="Type" />
@@ -98,7 +98,9 @@ const Body = () => {
               <SelectGroup>
                 <SelectItem value="NSB male">NSB Male</SelectItem>
                 <SelectItem value="NSB female">NSB Female</SelectItem>
-                <SelectItem value="GSD Cross Female">GSD Cross Female</SelectItem>
+                <SelectItem value="GSD Cross Female">
+                  GSD Cross Female
+                </SelectItem>
                 <SelectItem value="Mixed Breed Male">
                   Mixed Breed Male
                 </SelectItem>
@@ -128,7 +130,9 @@ const Body = () => {
 
       <div className="flex flex-wrap justify-center gap-4 align-baseline my-4">
         {loading ? (
-          <div>Loading...</div>
+          <div>
+            <AiOutlineLoading size={34} className="animate-spin text-primary" />
+          </div>
         ) : (
           data.map((x: any) => (
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4" key={x.id}>
