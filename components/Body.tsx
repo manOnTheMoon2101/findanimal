@@ -104,8 +104,8 @@ const Body = () => {
             </SelectTrigger>
             <SelectContent className="bg-background">
               <SelectGroup>
-                <SelectItem value="Dog">Dogs</SelectItem>
-                <SelectItem value="Cat">Cats</SelectItem>
+                <SelectItem value="Dog" className="cursor-pointer">Dogs</SelectItem>
+                <SelectItem value="Cat" className="cursor-pointer">Cats</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
@@ -115,7 +115,7 @@ const Body = () => {
                 onClick={handleClearSelection}
                 className="bg-red-500 text-white px-4 py-2 rounded-md ml-4"
               >
-                Clear Selection
+                Clear Filter
               </Button>
             )}
           </div>
