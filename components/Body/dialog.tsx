@@ -13,6 +13,10 @@ import Image from "next/image";
 import { Badge } from "../ui/badge";
 
 export function MainDialog(data: any) {
+  const format =
+    data.data.age > 1
+      ? `${data.data.age} ${data.data.ageDate}s`
+      : `${data.data.age} ${data.data.ageDate}`;
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -35,9 +39,7 @@ export function MainDialog(data: any) {
           />
         </div>
         <DialogDescription>
-          <Badge>
-            {data.data.age} {data.data.ageDate}
-          </Badge>
+          <Badge>{format}</Badge>
         </DialogDescription>
         <DialogFooter>
           <a
