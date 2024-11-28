@@ -28,6 +28,8 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import { Annie_Use_Your_Telescope } from "next/font/google";
 import { AiOutlineLoading } from "react-icons/ai";
+import RandomTip from "./Body/tips/Generator";
+import { Badge } from "./ui/badge";
 const annie = Annie_Use_Your_Telescope({
   weight: "400",
   subsets: ["latin"],
@@ -77,6 +79,10 @@ const Body = () => {
           {/* <h2 className="text-black text-4xl md:text-5xl font-bold text-left absolute bottom-0 right-4 mb-4 ml-4 bg-white rounded ">
             find_A_nimal.
           </h2> */}
+
+          <div className="text-black text-4xl md:text-5xl font-bold text-left absolute bottom-0 right-4 mb-4 ml-4">
+          <Badge className="bg-accent text-white flex justify-center"><RandomTip/></Badge>
+          </div>
         </div>
       </div>
 
