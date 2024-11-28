@@ -9,8 +9,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "../ui/badge";
-import { MainDialog } from "./dialog";
+import { Badge } from "@/components/ui/badge";
+import { MainDialog } from "../card-dialog/dialog";
 import formatDate from "@/utils/dateFormat";
 
 export function MainCard(props: any) {

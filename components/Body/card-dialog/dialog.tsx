@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import { IoMdOpen } from "react-icons/io";
 import Image from "next/image";
-import { Badge } from "../ui/badge";
+import { Badge } from "@/components/ui/badge";
 
 export function MainDialog(data: any) {
   const format =

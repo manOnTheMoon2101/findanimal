@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { MainCard } from "./Body/card";
+import { MainCard } from "./card/card";
 import dogs from "@/app/assets/images/dogs3.jpg";
 import {
   Select,
@@ -10,26 +10,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "@/components/ui/command";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 import Image from "next/image";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { Annie_Use_Your_Telescope } from "next/font/google";
 import { AiOutlineLoading } from "react-icons/ai";
-import RandomTip from "./Body/tips/Generator";
-import { Badge } from "./ui/badge";
+import RandomTip from "./tips/Generator";
+import { Badge } from "../ui/badge";
 const annie = Annie_Use_Your_Telescope({
   weight: "400",
   subsets: ["latin"],
