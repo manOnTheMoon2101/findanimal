@@ -6,16 +6,10 @@ import {
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { InfoDialog } from "../Body/info/Info";
+import { InfoDialog } from "@/components/Body/info/Info";
 export function Menu() {
   return (
     <DropdownMenu>
@@ -25,9 +19,6 @@ export function Menu() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56 bg-background">
-        {/* <DropdownMenuLabel className="text-center">
-          find_A_nimal
-        </DropdownMenuLabel> */}
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem onSelect={(e) => e.preventDefault()}>

@@ -55,14 +55,12 @@ async function scrapeDogPage(h2Value) {
 
   const $ = cheerio.load(html);
 
-  // Try to get p tags from the first div
   const pTags = $("div.x-text.x-content.e104-e10.m2w-y.m2w-z p");
   const petData = {
     name: h2Value,
     details: "",
   };
 
-  // If the first div has p tags
   if (pTags.length) {
     pTags.each((index, element) => {
       const text = $(element).text();
@@ -73,7 +71,9 @@ async function scrapeDogPage(h2Value) {
       }
     });
 
-    const imgSrc = $( "div.x-col.e102-e3.m2u-g.m2u-h span img, div.x-col.e104-e3.m2w-g.m2w-h span img" ).attr("src");
+    const imgSrc = $(
+      "div.x-col.e102-e3.m2u-g.m2u-h span img, div.x-col.e104-e3.m2w-g.m2w-h span img"
+    ).attr("src");
 
     if (imgSrc) {
       petData.image = imgSrc;
@@ -81,7 +81,9 @@ async function scrapeDogPage(h2Value) {
       console.log(`No image found for ${h2Value}`);
     }
 
-    const detailsText = $("div.x-text.x-content.e104-e10.m2w-y.m2w-z").text().trim();
+    const detailsText = $("div.x-text.x-content.e104-e10.m2w-y.m2w-z")
+      .text()
+      .trim();
     if (detailsText) {
       petData.details = detailsText;
 
@@ -95,15 +97,12 @@ async function scrapeDogPage(h2Value) {
       }
     }
   } else {
-    // If the first div does not exist, look in the second div (x-text.x-content.e102-e10.m2u-z.m2u-10)
     const alternatePTags = $("div.x-text.x-content.e102-e10.m2u-z.m2u-10 p");
 
     if (alternatePTags.length >= 3) {
-      // Last p tag for petData.type
       const lastTagText = $(alternatePTags[2]).text().trim();
       petData.type = lastTagText;
 
-      // Second p tag for petData.age
       const secondTagText = $(alternatePTags[1]).text().trim();
       const ageMatch = secondTagText.match(/\b\d+\b/);
       if (ageMatch) {
@@ -116,15 +115,15 @@ async function scrapeDogPage(h2Value) {
     }
   }
 
-  // Extract image from both divs (fallback logic)
-  const imgSrc = $( "div.x-col.e102-e3.m2u-g.m2u-h span img, div.x-col.e104-e3.m2w-g.m2w-h span img" ).attr("src");
+  const imgSrc = $(
+    "div.x-col.e102-e3.m2u-g.m2u-h span img, div.x-col.e104-e3.m2w-g.m2w-h span img"
+  ).attr("src");
   if (imgSrc) {
     petData.image = imgSrc;
   } else {
     console.log(`No image found for ${h2Value}`);
   }
 
-  // If any petData is populated, return it
   if (
     petData.details ||
     petData.type ||
