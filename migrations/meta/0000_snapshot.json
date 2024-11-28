@@ -1,5 +1,5 @@
 {
-  "id": "27ac8b79-029e-4d3e-a1f8-13ff3936ac40",
+  "id": "53deec76-d89a-48ab-afa4-61bd07a1d31a",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -26,8 +26,26 @@
           "primaryKey": false,
           "notNull": false
         },
+        "animalType": {
+          "name": "animalType",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
         "details": {
           "name": "details",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "age": {
+          "name": "age",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ageDate": {
+          "name": "ageDate",
           "type": "text",
           "primaryKey": false,
           "notNull": false

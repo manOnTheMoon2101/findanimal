@@ -13,6 +13,10 @@
     "type": "NSB female"
   },
   {
+    "name": "NSB Female",
+    "type": "NSB Female"
+  },
+  {
     "name": "Terrier cross male",
     "type": "Terrier cross male"
   },
@@ -27,6 +31,10 @@
   {
     "name": "GSD Cross Female",
     "type": "GSD Cross Female"
+  },
+  {
+    "name": "GSD x Female",
+    "type": "GSD x Female"
   },
   {
     "name": "Cross Breed Male",
