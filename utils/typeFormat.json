@@ -3,8 +3,7 @@
     "name": " Mixed Breed Male",
     "type": "Mixed Breed Male"
   },
-  { "name": "Mixed Breed Female",
-   "type": "Mixed Breed Female" },
+  { "name": "Mixed Breed Female", "type": "Mixed Breed Female" },
   {
     "name": "NSB Male",
     "type": "NSB male"
@@ -12,6 +11,10 @@
   {
     "name": "NSB female",
     "type": "NSB female"
+  },
+  {
+    "name": "NSB Female",
+    "type": "NSB Female"
   },
   {
     "name": "Terrier cross male",
@@ -30,11 +33,78 @@
     "type": "GSD Cross Female"
   },
   {
+    "name": "GSD x Female",
+    "type": "GSD x Female"
+  },
+  {
     "name": "Cross Breed Male",
     "type": "Cross breed Male"
   },
   {
     "name": "Terrier x Male",
     "type": "Terrier x Male"
+  },
+
+  {
+    "name": "Calico DSH Female",
+    "type": "Calico DSH Female"
+  },
+  {
+    "name": "DHS female kitten",
+    "type": "DHS female kitten"
+  },
+  {
+    "name": "DMH girlie",
+    "type": "DMH girlie"
+  },
+  {
+    "name": "DMH male",
+    "type": "DMH male"
+  },
+
+  {
+    "name": "DMH male kitten",
+    "type": "DMH male kitten"
+  },
+  {
+    "name": "DSH Female",
+    "type": "DSH Female"
+  },
+  {
+    "name": "DSH Male",
+    "type": "DSH Male"
+  },
+  {
+    "name": "DSH Male kitten",
+    "type": "DSH Male kitten"
+  },
+
+  {
+    "name": "DSH female",
+    "type": "DSH female"
+  },
+  {
+    "name": "DSH female kitten",
+    "type": "DSH female kitten"
+  },
+  {
+    "name": "DSH girlie",
+    "type": "DSH girlie"
+  },
+  {
+    "name": "DSH girly",
+    "type": "DSH girly"
+  },
+  {
+    "name": "DSH male",
+    "type": "DSH male"
+  },
+  {
+    "name": "Tabby DSH girlie",
+    "type": "Tabby DSH girlie"
+  },
+  {
+    "name": "NSB female puppy",
+    "type": "NSB female puppy"
   }
 ]

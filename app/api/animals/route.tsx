@@ -9,7 +9,10 @@ export const GET = async (req: any) => {
 
     let result;
     if (type) {
-      result = await db.select().from(animals).where(eq(animals.type, type));
+      result = await db
+        .select()
+        .from(animals)
+        .where(eq(animals.animalType, type));
     } else {
       result = await db.select().from(animals);
     }

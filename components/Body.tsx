@@ -99,27 +99,13 @@ const Body = () => {
         <div className="flex flex-col items-center justify-center">
           <span className="text-center font-bold">Filter</span>
           <Select onValueChange={handleSelectChange} value={selectedType}>
-            <SelectTrigger className="w-[180px] bg-accent text-white">
+            <SelectTrigger className="w-[180px] bg-primary text-white">
               <SelectValue placeholder="Type" />
             </SelectTrigger>
             <SelectContent className="bg-background">
               <SelectGroup>
-                <SelectItem value="NSB male">NSB Male</SelectItem>
-                <SelectItem value="NSB female">NSB Female</SelectItem>
-                <SelectItem value="GSD Cross Female">
-                  GSD Cross Female
-                </SelectItem>
-                <SelectItem value="Mixed Breed Male">
-                  Mixed Breed Male
-                </SelectItem>
-                <SelectItem value="Mixed Breed Female">
-                  Mixed Breed Female
-                </SelectItem>
-                <SelectItem value="Cross breed Male">
-                  Cross Breed Male
-                </SelectItem>
-
-                <SelectItem value="Terrier x Male">Terrier x Male</SelectItem>
+                <SelectItem value="Dog" className="cursor-pointer">Dogs</SelectItem>
+                <SelectItem value="Cat" className="cursor-pointer">Cats</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
@@ -129,7 +115,7 @@ const Body = () => {
                 onClick={handleClearSelection}
                 className="bg-red-500 text-white px-4 py-2 rounded-md ml-4"
               >
-                Clear Selection
+                Clear Filter
               </Button>
             )}
           </div>

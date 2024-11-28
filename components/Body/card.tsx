@@ -16,14 +16,16 @@ import formatDate from "@/utils/dateFormat";
 export function MainCard(props: any) {
   const matchedType = types.find((x: any) => x.type === props.type);
 
+  const format =
+    props.age > 1
+      ? `${props.age} ${props.ageDate}s`
+      : `${props.age} ${props.ageDate}`;
   return (
     <Card className="w-[350px] bg-background drop-shadow-xl">
       <CardHeader>
         <CardTitle className="flex flex-row justify-between items-center">
           <span>{props.name}</span>
-          <Badge className="bg-primary">
-            {props.age} {props.ageDate}
-          </Badge>
+          <Badge className="bg-primary">{format}</Badge>
         </CardTitle>
         <CardDescription>
           {matchedType ? matchedType.name : "Unknown"}
